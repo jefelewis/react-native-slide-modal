@@ -1,22 +1,37 @@
 // Imports: Dependencies
 import React, { useState } from 'react';
-import { Button, Text, SafeAreaView, View } from 'react-native';
+import { Button, Text } from 'react-native';
 
 // Imports: Components
-// import { ContactActionSheet, ContactItem }  from './src/index';
 import { SlideModal }  from './src/index';
 
 // App
 const App: React.FC = (): JSX.Element => {
+  // React Hooks: State
+  const [ modalVisible, setModalVisible ] = useState<boolean>(false);
+
   return (
     <SlideModal
-      modal={
+      modalType="iOS Form Sheet"
+      // modalType="iOS Bottom Sheet"
+      modalVisible={modalVisible}
+      screenContainer={
         <>
-          <Text>Hi</Text>
+          <Button
+            title="Show Modal"
+            onPress={() => setModalVisible(!modalVisible)}
+          />
         </>
       }
-      pressDone={() => console.log('Done Pressed')}
-      pressCancel={() => console.log('Cancel Pressed')}
+
+      modalContainer={
+        <>
+          <Text>Modal Content</Text>
+        </>
+      }
+      modalHeaderTitle="Header Title"
+      pressDone={() => setModalVisible(!modalVisible)}
+      pressCancel={() => setModalVisible(!modalVisible)}
       darkMode={false}
       doneDisabled={false}
     />
