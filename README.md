@@ -34,10 +34,7 @@
 npm i react-native-slide-modal
 ```
 
-**2. Install Cocoapods:**
-```
-pod install
-```
+**2. Add Example Code (See Below).**
 
 **3. Run Project:**
 
@@ -53,8 +50,14 @@ react-native run-ios
 
 
 ## Screenshot (iOS)
+**Bottom Sheet**
 <div align="center">
-  <!-- <img src="/screenshots/ios/iosActionSheet.gif" width="40%" height="40%" /> -->
+  <img src="/screenshots/ios/iosBottomSheet.gif" width="40%" height="40%" />
+</div>
+
+**Form Sheet**
+<div align="center">
+  <img src="/screenshots/ios/iosFormSheet.gif" width="40%" height="40%" />
 </div>
 
 ## Screenshot (Android)
@@ -123,6 +126,12 @@ npm publish
 
 
 ## Changelog
+
+### [0.0.2] - 5/18/2021
+
+***Added***
+
+- Added `README` screenshots.
 
 ### [0.0.2] - 5/18/2021
 
