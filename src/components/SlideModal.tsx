@@ -1,14 +1,16 @@
 // Imports: Dependencies
-import React, { useState } from 'react';
-import { Alert, Button, Dimensions, SafeAreaView, View, Modal, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Button, Dimensions, Modal, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 
 // Imports: TypeScript Types
 import { ContainerStyle, CancelTextStyle, DoneTextStyle, ModalHeaderContainerStyle, ModalContentContainerStyle, PickerItemTextStyle } from '../types/types';
 
 // TypeScript Type: Props
 interface Props {
+  screenContainer: JSX.Element,
+  modalContainer: JSX.Element,
   modalType?: 'iOS Bottom Sheet' | 'iOS Form Sheet',
-  modal: JSX.Element,
+  modalVisible: boolean,
   darkMode?: boolean,
   modalHeaderTitle?: string,
   pressCancel: () => void,
@@ -27,9 +29,6 @@ const { height, width } = Dimensions.get('window');
 
 // Component: Slide Modal
 const SlideModal: React.FC<Props> = (props): JSX.Element => {
-  // React Hooks: State
-  const [ modalVisible, setModalVisible ] = useState<boolean>(false);
-
   // Render Modal Header Container Style
   const renderModalHeaderContainerStyle = (): any => {
     // Dark Mode
@@ -180,43 +179,22 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
     }
   };
 
-  // Press Done
-  const pressDone = (): void => {
-    // Set State
-    setModalVisible(!modalVisible);
-
-    // Props
-    props.pressDone();
-  };
-
-  // Press Cancel
-  const pressCancel = (): void => {
-    // Set State
-    setModalVisible(!modalVisible);
-
-    // Props
-    props.pressCancel();
-  };
-
   // Render Modal Type
   const renderModalType = (): JSX.Element => {
     // iOS Form Sheet
     if (props.modalType === 'iOS Form Sheet') {
       return (
         <View style={styles.modalClosedContainer}>
-          <Button
-            title="Show Modal"
-            onPress={() => setModalVisible(!modalVisible)}
-          />
+          <>{props.screenContainer}</>
 
           <Modal
             animationType="slide"
-            visible={modalVisible}
+            visible={props.modalVisible}
             presentationStyle="formSheet"
           >
             <View style={styles.formSheetModalContainer}>
               <View style={renderModalHeaderContainerStyle()}>
-                <TouchableOpacity onPress={() => pressCancel()}>
+                <TouchableOpacity onPress={props.pressCancel}>
                   <Text style={renderCancelTextStyle()}>Cancel</Text>
                 </TouchableOpacity>
 
@@ -225,7 +203,7 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
                 <View style={styles.doneButtonContainer}>
                   <Button
                     title="Done"
-                    onPress={() => pressDone()}
+                    onPress={props.pressDone}
                     color={renderDoneTextStyle()}
                     disabled={props.doneDisabled}
                   />
@@ -233,7 +211,7 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
               </View>
 
               <View style={renderFormSheetModalContentContainerStyle()}>
-                <Text>Content</Text>
+                <>{props.modalContainer}</>
               </View>
             </View>
           </Modal>
@@ -242,27 +220,24 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
     }
     else {
       return (
-        <View style={modalVisible ? styles.modalOpenContainer : styles.modalClosedContainer}>
-          <Button
-            title="Show Modal"
-            onPress={() => setModalVisible(!modalVisible)}
-          />
+        <View style={props.modalVisible ? styles.modalOpenContainer : styles.modalClosedContainer}>
+          <>{props.screenContainer}</>
 
           <Modal
             animationType="slide"
             transparent={true}
-            visible={modalVisible}
+            visible={props.modalVisible}
           >
             <View style={styles.bottomSheetModalContainer}>
               <View style={renderModalHeaderContainerStyle()}>
-                <TouchableOpacity onPress={() => pressCancel()}>
+                <TouchableOpacity onPress={props.pressCancel}>
                   <Text style={renderCancelTextStyle()}>Cancel</Text>
                 </TouchableOpacity>
 
                 <View style={styles.doneButtonContainer}>
                   <Button
                     title="Done"
-                    onPress={() => pressDone()}
+                    onPress={props.pressDone}
                     color={renderDoneTextStyle()}
                     disabled={props.doneDisabled}
                   />
@@ -270,7 +245,7 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
               </View>
 
               <View style={renderBottomSheetModalContentContainerStyle()}>
-                <Text>Content</Text>
+                <>{props.modalContainer}</>
               </View>
             </View>
           </Modal>
