@@ -7,9 +7,10 @@ import { ContainerStyle, CancelTextStyle, DoneTextStyle, ModalHeaderContainerSty
 
 // TypeScript Type: Props
 interface Props {
-  modalType?: 'default' | 'iOS Bottom' | 'iOS Full',
+  modalType?: 'iOS Bottom Sheet' | 'iOS Form Sheet',
   modal: JSX.Element,
   darkMode?: boolean,
+  modalHeaderTitle?: string,
   pressCancel: () => void,
   pressDone: () => void,
   doneDisabled: boolean,
@@ -29,42 +30,6 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
   // React Hooks: State
   const [ modalVisible, setModalVisible ] = useState<boolean>(false);
 
-  // // Render Container Style
-  // const renderContainerStyle = (): any => {
-  //   // Dark Mode
-  //   if (props.darkMode) {
-  //     return (
-  //       {
-  //         display: 'flex',
-  //         width: width - 32,
-  //         marginLeft: 16,
-  //         paddingRight: 16,
-  //         paddingBottom: 12,
-  //         marginBottom: 12,
-  //         borderColor: props.customStyleContainer?.containerDark.borderColor ? props.customStyleContainer.containerDark.borderColor : '#8D8D93',
-  //         borderBottomWidth: props.customStyleContainer?.containerDark.borderBottomWidth ? props.customStyleContainer.containerDark.borderBottomWidth : StyleSheet.hairlineWidth,
-  //         backgroundColor: props.customStyleContainer?.containerDark.backgroundColor ? props.customStyleContainer.containerDark.backgroundColor : undefined,
-  //       }
-  //     );
-  //   }
-  //   // Light Mode
-  //   else {
-  //     return (
-  //       {
-  //         display: 'flex',
-  //         width: width - 32,
-  //         marginLeft: 16,
-  //         paddingRight: 16,
-  //         paddingBottom: 12,
-  //         marginBottom: 12,
-  //         borderColor: props.customStyleContainer?.containerLight.borderColor ? props.customStyleContainer.containerLight.borderColor : '#8A8A8E',
-  //         borderBottomWidth: props.customStyleContainer?.containerLight.borderBottomWidth ? props.customStyleContainer.containerLight.borderBottomWidth : StyleSheet.hairlineWidth,
-  //         backgroundColor: props.customStyleContainer?.containerLight.backgroundColor ? props.customStyleContainer.containerLight.backgroundColor : undefined,
-  //       }
-  //     );
-  //   }
-  // };
-
   // Render Modal Header Container Style
   const renderModalHeaderContainerStyle = (): any => {
     // Dark Mode
@@ -76,7 +41,7 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
           justifyContent: 'space-between',
           alignItems: 'center',
           width: width,
-          height: props.customStyleModalHeaderContainer?.modalHeaderContainerDark.height ? props.customStyleModalHeaderContainer.modalHeaderContainerDark.height : 45,
+          height: props.customStyleModalHeaderContainer?.modalHeaderContainerDark.height ? props.customStyleModalHeaderContainer.modalHeaderContainerDark.height : 55,
           backgroundColor: props.customStyleModalHeaderContainer?.modalHeaderContainerDark.backgroundColor ? props.customStyleModalHeaderContainer.modalHeaderContainerDark.backgroundColor : '#383838',
           borderColor: props.customStyleModalHeaderContainer?.modalHeaderContainerDark.borderColor ? props.customStyleModalHeaderContainer.modalHeaderContainerDark.borderColor : '#E9E9EB',
           borderBottomWidth: props.customStyleModalHeaderContainer?.modalHeaderContainerDark.borderBottomWidth ? props.customStyleModalHeaderContainer.modalHeaderContainerDark.borderBottomWidth : StyleSheet.hairlineWidth,
@@ -92,7 +57,7 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
           justifyContent: 'space-between',
           alignItems: 'center',
           width: width,
-          height: props.customStyleModalHeaderContainer?.modalHeaderContainerLight.height ? props.customStyleModalHeaderContainer.modalHeaderContainerLight.height : 45,
+          height: props.customStyleModalHeaderContainer?.modalHeaderContainerLight.height ? props.customStyleModalHeaderContainer.modalHeaderContainerLight.height : 55,
           backgroundColor: props.customStyleModalHeaderContainer?.modalHeaderContainerLight.backgroundColor ? props.customStyleModalHeaderContainer.modalHeaderContainerLight.backgroundColor : '#FFFFFF',
           borderColor: props.customStyleModalHeaderContainer?.modalHeaderContainerLight.borderColor ? props.customStyleModalHeaderContainer.modalHeaderContainerLight.borderColor : '#CED4DA',
           borderBottomWidth: props.customStyleModalHeaderContainer?.modalHeaderContainerLight.borderBottomWidth ? props.customStyleModalHeaderContainer.modalHeaderContainerLight.borderBottomWidth : StyleSheet.hairlineWidth,
@@ -141,8 +106,8 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
     }
   };
 
-  // Render Modal Content Container Style
-  const renderModalContentContainerStyle = (): any => {
+  // Render Bottom Sheet Modal Content Container Style
+  const renderBottomSheetModalContentContainerStyle = (): any => {
     // Dark Mode
     if (props.darkMode) {
       return (
@@ -173,6 +138,48 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
     }
   };
 
+  // Render Form Sheet Modal Content Container Style
+  const renderFormSheetModalContentContainerStyle = (): any => {
+    // Dark Mode
+    if (props.darkMode) {
+      return (
+        {
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: width,
+          backgroundColor: props.customStyleModalContentContainer?.modalContentContainerDark.backgroundColor ? props.customStyleModalContentContainer.modalContentContainerDark.backgroundColor : '#121312',
+        }
+      );
+    }
+    // Light Mode
+    else {
+      return (
+        {
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: width,
+          backgroundColor: props.customStyleModalContentContainer?.modalContentContainerLight.backgroundColor ? props.customStyleModalContentContainer.modalContentContainerLight.backgroundColor : '#FFFFFF',
+        }
+      );
+    }
+  };
+
+  // Render Modal Header Title
+  const renderModalHeaderTitle = (): JSX.Element | undefined => {
+    // iOS Form Sheet + Check If Props Exists
+    if (props.modalType === 'iOS Form Sheet' && props.modalHeaderTitle) {
+      return (
+        <View style={styles.modalHeaderContainer}>
+          <Text style={props.darkMode ? styles.modalHeaderTitleDark : styles.modalHeaderTitleLight} numberOfLines={2}>{props.modalHeaderTitle}</Text>
+        </View>
+      );
+    }
+  };
+
   // Press Done
   const pressDone = (): void => {
     // Set State
@@ -191,40 +198,89 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
     props.pressCancel();
   };
 
-  return (
-    <View style={modalVisible ? styles.modalOpenContainer : styles.modalClosedContainer}>
-      <Button
-        title="Show Modal"
-        onPress={() => setModalVisible(!modalVisible)}
-      />
+  // Render Modal Type
+  const renderModalType = (): JSX.Element => {
+    // iOS Form Sheet
+    if (props.modalType === 'iOS Form Sheet') {
+      return (
+        <View style={styles.modalClosedContainer}>
+          <Button
+            title="Show Modal"
+            onPress={() => setModalVisible(!modalVisible)}
+          />
 
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-      >
-        <View style={styles.modalContainer}>
-          <View style={renderModalHeaderContainerStyle()}>
-            <TouchableOpacity onPress={() => pressCancel()}>
-                <Text style={renderCancelTextStyle()}>Cancel</Text>
-              </TouchableOpacity>
+          <Modal
+            animationType="slide"
+            visible={modalVisible}
+            presentationStyle="formSheet"
+          >
+            <View style={styles.formSheetModalContainer}>
+              <View style={renderModalHeaderContainerStyle()}>
+                <TouchableOpacity onPress={() => pressCancel()}>
+                  <Text style={renderCancelTextStyle()}>Cancel</Text>
+                </TouchableOpacity>
 
-              <View style={styles.doneButtonContainer}>
-                <Button
-                  title="Done"
-                  onPress={() => pressDone()}
-                  disabled={props.doneDisabled}
-                  color={renderDoneTextStyle()}
-                />
+                <>{renderModalHeaderTitle()}</>
+
+                <View style={styles.doneButtonContainer}>
+                  <Button
+                    title="Done"
+                    onPress={() => pressDone()}
+                    color={renderDoneTextStyle()}
+                    disabled={props.doneDisabled}
+                  />
+                </View>
               </View>
-          </View>
 
-          <View style={renderModalContentContainerStyle()}>
-            <Text>Content</Text>
-          </View>
+              <View style={renderFormSheetModalContentContainerStyle()}>
+                <Text>Content</Text>
+              </View>
+            </View>
+          </Modal>
         </View>
-      </Modal>
-    </View>
+      );
+    }
+    else {
+      return (
+        <View style={modalVisible ? styles.modalOpenContainer : styles.modalClosedContainer}>
+          <Button
+            title="Show Modal"
+            onPress={() => setModalVisible(!modalVisible)}
+          />
+
+          <Modal
+            animationType="slide"
+            transparent={true}
+            visible={modalVisible}
+          >
+            <View style={styles.bottomSheetModalContainer}>
+              <View style={renderModalHeaderContainerStyle()}>
+                <TouchableOpacity onPress={() => pressCancel()}>
+                  <Text style={renderCancelTextStyle()}>Cancel</Text>
+                </TouchableOpacity>
+
+                <View style={styles.doneButtonContainer}>
+                  <Button
+                    title="Done"
+                    onPress={() => pressDone()}
+                    color={renderDoneTextStyle()}
+                    disabled={props.doneDisabled}
+                  />
+                </View>
+              </View>
+
+              <View style={renderBottomSheetModalContentContainerStyle()}>
+                <Text>Content</Text>
+              </View>
+            </View>
+          </Modal>
+        </View>
+      );
+    }
+  };
+
+  return (
+    <>{renderModalType()}</>
   );
 };
 
@@ -245,15 +301,42 @@ const styles = StyleSheet.create({
     width: width,
     height: height,
   },
-  modalContainer: {
+  bottomSheetModalContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
     alignContent: 'center',
     width: width,
     height: height,
   },
+  formSheetModalContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignContent: 'center',
+  },
+  modalHeaderContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: width - 140,
+    paddingLeft: 16,
+    paddingRight: 16,
+  },
+  modalHeaderTitleLight: {
+    fontFamily: 'System',
+    fontSize: 13,
+    fontWeight: '500',
+    color: '#000000',
+    textAlign: 'center',
+  },
+  modalHeaderTitleDark: {
+    fontFamily: 'System',
+    fontSize: 13,
+    fontWeight: '500',
+    color: '#FFFFFF',
+    textAlign: 'center',
+  },
   doneButtonContainer: {
-    marginRight: 7,
+    marginRight: 10,
   },
 });
 
