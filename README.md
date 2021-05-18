@@ -127,6 +127,13 @@ npm publish
 
 ## Changelog
 
+### [0.0.9] - 5/18/2021
+
+***Changed***
+
+- Changed `alignContent` from `react` to `alignItems`.
+- Changed `compilerOptions.jsx` from `react` to `react-jsx`.
+
 ### [0.0.8] - 5/18/2021
 
 ***Changed***
