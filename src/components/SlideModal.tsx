@@ -9,7 +9,7 @@ import { ContainerStyle, CancelTextStyle, DoneTextStyle, ModalHeaderContainerSty
 interface Props {
   screenContainer: JSX.Element,
   modalContainer: JSX.Element,
-  modalType?: 'iOS Bottom Sheet' | 'iOS Form Sheet',
+  modalType: 'iOS Bottom Sheet' | 'iOS Form Sheet',
   modalVisible: boolean,
   darkMode?: boolean,
   modalHeaderTitle?: string,
