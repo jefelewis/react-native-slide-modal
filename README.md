@@ -127,6 +127,12 @@ npm publish
 
 ## Changelog
 
+### [0.0.4] - 5/18/2021
+
+***Added***
+
+- Added `react` and `react-native` as dependencies.
+
 ### [0.0.3] - 5/18/2021
 
 ***Added***
