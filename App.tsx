@@ -12,8 +12,8 @@ const App: React.FC = (): JSX.Element => {
 
   return (
     <SlideModal
-      modalType="iOS Form Sheet"
-      // modalType="iOS Bottom Sheet"
+      // modalType="iOS Form Sheet"
+      modalType="iOS Bottom Sheet"
       modalVisible={modalVisible}
       screenContainer={
         <>
