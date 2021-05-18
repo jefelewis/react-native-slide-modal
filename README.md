@@ -127,6 +127,12 @@ npm publish
 
 ## Changelog
 
+### [0.0.5] - 5/18/2021
+
+***Changed***
+
+- Updated `typescript`.
+
 ### [0.0.4] - 5/18/2021
 
 ***Added***
