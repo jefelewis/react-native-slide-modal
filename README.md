@@ -18,6 +18,7 @@
 *  ✅ Dark Mode
 *  ✅ Built with TypeScript
 *  ✅ Built with React Hooks
+*  ✅ Lightweight (0 Third Party Libraries)
 
 ## Built With
 * [TypeScript](https://github.com/microsoft/TypeScript) - Programming Language
