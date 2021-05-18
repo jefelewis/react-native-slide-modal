@@ -12,7 +12,7 @@ interface Props {
   darkMode?: boolean,
   pressCancel: () => void,
   pressDone: () => void,
-  disabled: boolean,
+  doneDisabled: boolean,
   customStyleContainer?: ContainerStyle,
   customStyleModalHeaderContainer?: ModalHeaderContainerStyle,
   customStyleCancelText?: CancelTextStyle,
@@ -213,7 +213,7 @@ const SlideModal: React.FC<Props> = (props): JSX.Element => {
                 <Button
                   title="Done"
                   onPress={() => pressDone()}
-                  disabled={props.disabled}
+                  disabled={props.doneDisabled}
                   color={renderDoneTextStyle()}
                 />
               </View>

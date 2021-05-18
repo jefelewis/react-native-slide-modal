@@ -18,7 +18,7 @@ const App: React.FC = (): JSX.Element => {
       pressDone={() => console.log('Done Pressed')}
       pressCancel={() => console.log('Cancel Pressed')}
       darkMode={false}
-      disabled={false}
+      doneDisabled={false}
     />
   );
 };
