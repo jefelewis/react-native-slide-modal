@@ -64,7 +64,48 @@ react-native run-ios
 
 ## Example Code
 ```typescript
+// Imports: Dependencies
+import React, { useState } from 'react';
+import { Button, Text } from 'react-native';
 
+// Imports: Components
+import { SlideModal }  from 'react-native-slide-modal';
+
+// App
+const App: React.FC = (): JSX.Element => {
+  // React Hooks: State
+  const [ modalVisible, setModalVisible ] = useState<boolean>(false);
+
+  return (
+    <SlideModal
+      modalType="iOS Form Sheet"
+      // modalType="iOS Bottom Sheet"
+      modalVisible={modalVisible}
+      screenContainer={
+        <>
+          <Button
+            title="Show Modal"
+            onPress={() => setModalVisible(!modalVisible)}
+          />
+        </>
+      }
+
+      modalContainer={
+        <>
+          <Text>Modal Content</Text>
+        </>
+      }
+      modalHeaderTitle="Header Title"
+      pressDone={() => setModalVisible(!modalVisible)}
+      pressCancel={() => setModalVisible(!modalVisible)}
+      darkMode={false}
+      doneDisabled={false}
+    />
+  );
+};
+
+// Exports
+export default App;
 ```
 
 ## Building & Publishing
@@ -82,8 +123,15 @@ npm publish
 
 ## Changelog
 
+### [0.0.2] - 5/18/2021
+
+***Added***
+
+- Added `README` example code.
+
+
 ### [0.0.1] - 5/18/2021
 
 ***Added***
 
-- Added `SlideModal` component.
+- Added `SlideModal` component (`iOS Bottom Sheet`, `iOS Form Sheet`).
