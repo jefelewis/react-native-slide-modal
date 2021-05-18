@@ -127,6 +127,12 @@ npm publish
 
 ## Changelog
 
+### [0.0.7] - 5/18/2021
+
+***Changed***
+
+- Added `@types/react` as `devDependencies`.
+
 ### [0.0.6] - 5/18/2021
 
 ***Changed***
