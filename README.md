@@ -127,6 +127,12 @@ npm publish
 
 ## Changelog
 
+### [0.0.6] - 5/18/2021
+
+***Changed***
+
+- Changed `compilerOptions.jsx` from `react-native` to `react-jsx`.
+
 ### [0.0.5] - 5/18/2021
 
 ***Changed***
