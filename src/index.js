@@ -9,5 +9,5 @@ export {
   // Components
   SlideModal,
   // TypeScript Types
-  ContactItem,
+  // ContactItem,
 };
