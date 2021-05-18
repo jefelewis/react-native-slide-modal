@@ -279,14 +279,14 @@ const styles = StyleSheet.create({
   bottomSheetModalContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
-    alignContent: 'center',
+    alignItems: 'center',
     width: width,
     height: height,
   },
   formSheetModalContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
-    alignContent: 'center',
+    alignItems: 'center',
   },
   modalHeaderContainer: {
     display: 'flex',
