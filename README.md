@@ -127,6 +127,24 @@ npm publish
 
 ## Changelog
 
+### [0.0.20] - 5/18/2021
+
+***Added***
+
+- Added `yalc` as a global dependency, so `yalc publish` can be used.
+
+### [0.0.17] - 5/18/2021
+
+***Changed***
+
+- Changed `compilerOptions.jsx` from `react` to `react-jsx`.
+
+### [0.0.16] - 5/18/2021
+
+***Removed***
+
+- Removed `import React from 'react'`.
+
 ### [0.0.15] - 5/18/2021
 
 ***Changed***
