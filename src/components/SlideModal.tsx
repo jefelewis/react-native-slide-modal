@@ -1,5 +1,5 @@
 // Imports: Dependencies
-import React from 'react';
+import * as React from 'react';
 import { Button, Dimensions, Modal, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 
 // Imports: TypeScript Types
