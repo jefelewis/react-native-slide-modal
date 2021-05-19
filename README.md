@@ -127,6 +127,24 @@ npm publish
 
 ## Changelog
 
+### [0.0.15] - 5/18/2021
+
+***Changed***
+
+- Changing `"lib": ["es2017"]` to `"lib": ["es2015"]` in `tsconfig.json`.
+
+### [0.0.12] - 5/18/2021
+
+***Changed***
+
+- Changing import from `import React from 'react';` to `import * as React from 'react';`.
+
+### [0.0.11] - 5/18/2021
+
+***Changed***
+
+- Updated NPM `dependencies`.
+
 ### [0.0.9] - 5/18/2021
 
 ***Changed***
