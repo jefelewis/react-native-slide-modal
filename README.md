@@ -127,11 +127,17 @@ npm publish
 
 ## Changelog
 
-### [0.0.20] - 5/18/2021
+### [0.0.20] - 5/19/2021
 
 ***Added***
 
 - Added `yalc` as a global dependency, so `yalc publish` can be used.
+
+### [0.0.19] - 5/18/2021
+
+***Changed***
+
+- Changed `inlineRequires: true` to `inlineRequires: false` in `metro.config.js`.
 
 ### [0.0.17] - 5/18/2021
 
