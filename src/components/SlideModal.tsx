@@ -315,4 +315,5 @@ const styles = StyleSheet.create({
   },
 });
 
+// Exports
 export default SlideModal;
