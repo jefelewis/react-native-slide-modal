@@ -9,7 +9,6 @@
 *  [Screenshot (iOS)](#screenshot-ios)
 *  [Screenshot (Android)](#screenshot-android)
 *  [Getting Started](#getting-started)
-*  [Example Code](#example-code)
 *  [Props](#props)
 *  [Example App](#example-app)
 *  [Building & Publishing](#building-&-publishing)
@@ -57,21 +56,8 @@
 npm i react-native-slide-modal
 ```
 
-**2. Add Example Code (See Below).**
+**2. Add Example Code.**
 
-**3. Run Project:**
-
-**Android**
-```javascript
-react-native run-android
-```
-
-**iOS**
-```javascript
-react-native run-ios
-```
-
-## Example Code
 ```typescript
 // Imports: Dependencies
 import React, { useState } from 'react';
@@ -115,6 +101,19 @@ const App: React.FC = (): JSX.Element => {
 // Exports
 export default App;
 ```
+
+**3. Run Project:**
+
+**Android**
+```javascript
+react-native run-android
+```
+
+**iOS**
+```javascript
+react-native run-ios
+```
+
 
 ## Props
 
