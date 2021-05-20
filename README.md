@@ -8,10 +8,10 @@
 *  [Pending Items](#pending-items)
 *  [Screenshot (iOS)](#screenshot-ios)
 *  [Screenshot (Android)](#screenshot-android)
+*  [Getting Started](#getting-started)
 *  [Example Code](#example-code)
 *  [Props](#props)
 *  [Example App](#example-app)
-*  [Getting Started](#getting-started)
 *  [Building & Publishing](#building-&-publishing)
 *  [Changelog](#changelog)
 
@@ -50,6 +50,26 @@
   <!-- <img src="/screenshots/android/androidActionSheet.gif" width="40%" height="40%" /> -->
 </div>
 
+
+## Getting Started
+**1. Install Package:**
+```
+npm i react-native-slide-modal
+```
+
+**2. Add Example Code (See Below).**
+
+**3. Run Project:**
+
+**Android**
+```javascript
+react-native run-android
+```
+
+**iOS**
+```javascript
+react-native run-ios
+```
 
 ## Example Code
 ```typescript
@@ -130,27 +150,6 @@ cd ExampleApp
 ```
 
 **2. Run Simulator:**
-
-**Android**
-```javascript
-react-native run-android
-```
-
-**iOS**
-```javascript
-react-native run-ios
-```
-
-
-## Getting Started
-**1. Install Package:**
-```
-npm i react-native-slide-modal
-```
-
-**2. Add Example Code (See Below).**
-
-**3. Run Project:**
 
 **Android**
 ```javascript
