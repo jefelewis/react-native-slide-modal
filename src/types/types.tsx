@@ -1,3 +1,8 @@
+// MODALS
+// TypeScript Type: Modal Type
+export type ModalType = 'iOS Bottom Sheet' | 'iOS Form Sheet';
+
+
 // STYLES
 // TypeScript Type: Font Weight
 type FontWeight = 'normal' | 'bold' | '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | undefined;
