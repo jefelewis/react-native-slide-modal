@@ -3,13 +3,13 @@ import * as React from 'react';
 import { Button, Dimensions, Modal, Text, TouchableOpacity, View, StyleSheet } from 'react-native';
 
 // Imports: TypeScript Types
-import { ContainerStyle, CancelTextStyle, DoneTextStyle, ModalHeaderContainerStyle, ModalContentContainerStyle, PickerItemTextStyle } from '../types/types';
+import { ModalType, ContainerStyle, CancelTextStyle, DoneTextStyle, ModalHeaderContainerStyle, ModalContentContainerStyle, PickerItemTextStyle } from '../types/types';
 
 // TypeScript Type: Props
 interface Props {
   screenContainer: JSX.Element,
   modalContainer: JSX.Element,
-  modalType: 'iOS Bottom Sheet' | 'iOS Form Sheet',
+  modalType: ModalType,
   modalVisible: boolean,
   darkMode?: boolean,
   modalHeaderTitle?: string,
