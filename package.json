@@ -1,6 +1,6 @@
 {
   "name": "react-native-slide-modal",
-  "version": "0.0.29",
+  "version": "0.0.31",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "description": "React Native Slide Modal",
