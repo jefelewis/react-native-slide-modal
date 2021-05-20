@@ -118,28 +118,28 @@ react-native run-ios
 ## Props
 
 **Default:**
-| Property          |   Type       |  Default              | Description                                                            |
-| ----------------- | :----------: | :-------------------: | ---------------------------------------------------------------------- |
-| screenContainer   | JSX.Element  | <></>                 | Screen content                                                         |
-| modalContainer    | JSX.Element  | <></>                 | Modal content                                                          |
-| modalType         | ModalType    | 'iOS Bottom Sheet'    | Modal slide type ('iOS Bottom Sheet' or 'iOS Form Sheet')              |
-| modalVisible      | boolean      | false                 | Modal visible                                                          |
-| pressCancel       | () => void   | undefined             | onPress for Cancel button                                              |
-| pressDone         | () => void   | undefined             | onPress for Done button                                                |
-| doneDisabled      | boolean      | false                 | Disable Done button                                                    |
+| Property            |   Type         |  Default                | Description                                                            |
+| ------------------- | :------------: | :---------------------: | ---------------------------------------------------------------------- |
+| `screenContainer`   | `JSX.Element`  | `<></>`                 | Screen content                                                         |
+| `modalContainer`    | `JSX.Element`  | `<></>`                 | Modal content                                                          |
+| `modalType`         | `ModalType`    | `'iOS Bottom Sheet'`    | Modal slide type ('iOS Bottom Sheet' or 'iOS Form Sheet')              |
+| `modalVisible`      | `boolean`      | `false`                 | Modal visible                                                          |
+| `pressCancel`       | `() => void`   | `undefined`             | onPress for Cancel button                                              |
+| `pressDone`         | `() => void`   | `undefined`             | onPress for Done button                                                |
+| `doneDisabled`      | `boolean`      | `false`                 | Disable Done button                                                    |
 
 
 **Optional:**
-| Property                          |   Type                       |  Default  | Description                                                            |
-| --------------------------------- | :--------------------------: | :-------: | ---------------------------------------------------------------------- |
-| darkMode                          | boolean                      | false     | Dark mode                                                              |
-| modalHeaderTitle                  | string                       | ''        | Modal header title                                                     |
-| customStyleContainer              | ContainerStyle               | iOS Theme | Styling for container                                                  |
-| customStyleModalHeaderContainer   | ModalHeaderContainerStyle    | iOS Theme | Styling for modal header container                                     |
-| customStyleCancelText             | CancelTextStyle              | iOS Theme | Styling for cancel text                                                |
-| customStyleDoneText               | DoneTextStyle                | iOS Theme | Styling for done text                                                  |
-| customStyleModalContentContainer  | ModalContentContainerStyle   | iOS Theme | Styling for modal content container                                    |
-| customStylePickerItemText         | PickerItemTextStyle          | iOS Theme | Styling for picker item text                                           |
+| Property                            |   Type                         |  Default     | Description                                                            |
+| ----------------------------------- | :----------------------------: | :----------: | ---------------------------------------------------------------------- |
+| `darkMode`                          | `boolean`                      | `false`      | Dark mode                                                              |
+| `modalHeaderTitle`                  | `string`                       | `''`         | Modal header title                                                     |
+| `customStyleContainer`              | `ContainerStyle`               | iOS Theme    | Styling for container                                                  |
+| `customStyleModalHeaderContainer`   | `ModalHeaderContainerStyle`    | iOS Theme    | Styling for modal header container                                     |
+| `customStyleCancelText`             | `CancelTextStyle`              | iOS Theme    | Styling for cancel text                                                |
+| `customStyleDoneText`               | `DoneTextStyle`                | iOS Theme    | Styling for done text                                                  |
+| `customStyleModalContentContainer`  | `ModalContentContainerStyle`   | iOS Theme    | Styling for modal content container                                    |
+| `customStylePickerItemText`         | `PickerItemTextStyle`          | iOS Theme    | Styling for picker item text                                           |
 
 
 ## Example App
