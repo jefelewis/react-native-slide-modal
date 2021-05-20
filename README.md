@@ -52,12 +52,12 @@ react-native run-ios
 ## Screenshot (iOS)
 **Bottom Sheet**
 <div align="center">
-  <img src="/screenshots/ios/iosBottomSheet.gif" width="40%" height="40%" />
+  <img src="/assets/screenshots/ios/iosBottomSheet.gif" width="40%" height="40%" />
 </div>
 
 **Form Sheet**
 <div align="center">
-  <img src="/screenshots/ios/iosFormSheet.gif" width="40%" height="40%" />
+  <img src="/assets/screenshots/ios/iosFormSheet.gif" width="40%" height="40%" />
 </div>
 
 ## Screenshot (Android)
@@ -93,7 +93,6 @@ const App: React.FC = (): JSX.Element => {
           />
         </>
       }
-
       modalContainer={
         <>
           <Text>Modal Content</Text>
