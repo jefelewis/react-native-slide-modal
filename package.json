@@ -1,6 +1,6 @@
 {
   "name": "react-native-slide-modal",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "description": "React Native Slide Modal",
@@ -21,8 +21,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "peerDependencies": {
-    "react": ">= 16.x.x",
-    "react-native": ">=0.63.x"
+    "react": "*",
+    "react-native": "*"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
