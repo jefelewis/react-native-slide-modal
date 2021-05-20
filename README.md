@@ -6,13 +6,15 @@
 *  [Features](#features)
 *  [Built With](#built-with)
 *  [Pending Items](#pending-items)
-*  [Getting Started](#getting-started)
-*  [Example Code](#example-code)
-*  [Props](#props)
 *  [Screenshot (iOS)](#screenshot-ios)
 *  [Screenshot (Android)](#screenshot-android)
+*  [Example Code](#example-code)
+*  [Props](#props)
+*  [Example App](#example-app)
+*  [Getting Started](#getting-started)
 *  [Building & Publishing](#building-&-publishing)
 *  [Changelog](#changelog)
+
 
 ## Features
 *  ✅ iOS/Android
@@ -21,33 +23,15 @@
 *  ✅ Built with React Hooks
 *  ✅ Lightweight (0 Third Party Libraries)
 
+
 ## Built With
 * [TypeScript](https://github.com/microsoft/TypeScript) - Programming Language
 * [React Hooks](https://reactjs.org/docs/hooks-intro.html) - Functional Component State/Lifecycle Methods
 * [React Native](https://facebook.github.io/react-native/) - Mobile (iOS/Android) Framework
 
+
 ## Pending Items
 - [ ] 
-
-## Getting Started
-**1. Install Package:**
-```
-npm i react-native-slide-modal
-```
-
-**2. Add Example Code (See Below).**
-
-**3. Run Project:**
-
-**Android**
-```javascript
-react-native run-android
-```
-
-**iOS**
-```javascript
-react-native run-ios
-```
 
 
 ## Screenshot (iOS)
@@ -137,6 +121,46 @@ export default App;
 | customStyleDoneText               | DoneTextStyle                | iOS Theme | Styling for done text                                                  |
 | customStyleModalContentContainer  | ModalContentContainerStyle   | iOS Theme | Styling for modal content container                                    |
 | customStylePickerItemText         | PickerItemTextStyle          | iOS Theme | Styling for picker item text                                           |
+
+
+## Example App
+**1. Open Example App:**
+```
+cd ExampleApp
+```
+
+**2. Run Simulator:**
+
+**Android**
+```javascript
+react-native run-android
+```
+
+**iOS**
+```javascript
+react-native run-ios
+```
+
+
+## Getting Started
+**1. Install Package:**
+```
+npm i react-native-slide-modal
+```
+
+**2. Add Example Code (See Below).**
+
+**3. Run Project:**
+
+**Android**
+```javascript
+react-native run-android
+```
+
+**iOS**
+```javascript
+react-native run-ios
+```
 
 
 ## Building & Publishing
