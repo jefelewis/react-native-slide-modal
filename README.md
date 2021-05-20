@@ -182,6 +182,7 @@ npm publish
 ***Added***
 
 - Added Props section to `README`.
+- Added Example App section to `README`.
 
 ***Changed***
 
