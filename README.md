@@ -8,6 +8,7 @@
 *  [Pending Items](#pending-items)
 *  [Getting Started](#getting-started)
 *  [Example Code](#example-code)
+*  [Props](#props)
 *  [Screenshot (iOS)](#screenshot-ios)
 *  [Screenshot (Android)](#screenshot-android)
 *  [Building & Publishing](#building-&-publishing)
@@ -110,6 +111,33 @@ const App: React.FC = (): JSX.Element => {
 // Exports
 export default App;
 ```
+
+## Props
+
+**Default:**
+| Property          |   Type       |  Default              | Description                                                            |
+| ----------------- | :----------: | :-------------------: | ---------------------------------------------------------------------- |
+| screenContainer   | JSX.Element  | <></>                 | Screen content                                                         |
+| modalContainer    | JSX.Element  | <></>                 | Modal content                                                          |
+| modalType         | ModalType    | 'iOS Bottom Sheet'    | Modal slide type ('iOS Bottom Sheet' or 'iOS Form Sheet')              |
+| modalVisible      | boolean      | false                 | Modal visible                                                          |
+| pressCancel       | () => void   | undefined             | onPress for Cancel button                                              |
+| pressDone         | () => void   | undefined             | onPress for Done button                                                |
+| doneDisabled      | boolean      | false                 | Disable Done button                                                    |
+
+
+**Optional:**
+| Property                          |   Type                       |  Default  | Description                                                            |
+| --------------------------------- | :--------------------------: | :-------: | ---------------------------------------------------------------------- |
+| darkMode                          | boolean                      | false     | Dark mode                                                              |
+| modalHeaderTitle                  | string                       | ''        | set your own logic for the button functionality when it is pressed     |
+| customStyleContainer              | ContainerStyle               | iOS Theme | change the button's text                                               |
+| customStyleModalHeaderContainer   | ModalHeaderContainerStyle    | iOS Theme | set or override the style object for the main container                |
+| customStyleCancelText             | CancelTextStyle              | iOS Theme | set or override the style object for the button style                  |
+| customStyleDoneText               | DoneTextStyle                | iOS Theme | set your own component instead ofiOS Themereact-native Image component |
+| customStyleModalContentContainer  | ModalContentContainerStyle   | iOS Theme | set your own component instead ofiOS Themereact-native Image component |
+| customStylePickerItemText         | PickerItemTextStyle          | iOS Theme | set your own component instead of default react-native Image component |
+
 
 ## Building & Publishing
 
