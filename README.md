@@ -126,6 +126,18 @@ npm publish
 
 ## Changelog
 
+### [0.0.27] - 5/20/2021
+
+***Changed***
+
+- Changed file structure.
+- Changed `index.js` to `index.tsx`.
+- Changed `package.json` build script to `cd src && tsc && cp ../package.json && Echo Build completed!`.
+
+***Removed***
+
+- Removed `yalc` as a global dependency.
+
 ### [0.0.20] - 5/19/2021
 
 ***Added***
