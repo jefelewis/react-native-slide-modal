@@ -130,13 +130,13 @@ export default App;
 | Property                          |   Type                       |  Default  | Description                                                            |
 | --------------------------------- | :--------------------------: | :-------: | ---------------------------------------------------------------------- |
 | darkMode                          | boolean                      | false     | Dark mode                                                              |
-| modalHeaderTitle                  | string                       | ''        | set your own logic for the button functionality when it is pressed     |
-| customStyleContainer              | ContainerStyle               | iOS Theme | change the button's text                                               |
-| customStyleModalHeaderContainer   | ModalHeaderContainerStyle    | iOS Theme | set or override the style object for the main container                |
-| customStyleCancelText             | CancelTextStyle              | iOS Theme | set or override the style object for the button style                  |
-| customStyleDoneText               | DoneTextStyle                | iOS Theme | set your own component instead ofiOS Themereact-native Image component |
-| customStyleModalContentContainer  | ModalContentContainerStyle   | iOS Theme | set your own component instead ofiOS Themereact-native Image component |
-| customStylePickerItemText         | PickerItemTextStyle          | iOS Theme | set your own component instead of default react-native Image component |
+| modalHeaderTitle                  | string                       | ''        | Modal header title                                                     |
+| customStyleContainer              | ContainerStyle               | iOS Theme | Styling for container                                                  |
+| customStyleModalHeaderContainer   | ModalHeaderContainerStyle    | iOS Theme | Styling for modal header container                                     |
+| customStyleCancelText             | CancelTextStyle              | iOS Theme | Styling for cancel text                                                |
+| customStyleDoneText               | DoneTextStyle                | iOS Theme | Styling for done text                                                  |
+| customStyleModalContentContainer  | ModalContentContainerStyle   | iOS Theme | Styling for modal content container                                    |
+| customStylePickerItemText         | PickerItemTextStyle          | iOS Theme | Styling for picker item text                                           |
 
 
 ## Building & Publishing
