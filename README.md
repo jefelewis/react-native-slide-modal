@@ -56,7 +56,7 @@
 npm i react-native-slide-modal
 ```
 
-**2. Add Example Code.**
+**2. Add Example Code:**
 
 ```typescript
 // Imports: Dependencies
