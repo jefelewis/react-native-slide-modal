@@ -77,10 +77,10 @@ export interface ModalContentContainerStyle {
 
 // TypeScript Type: Picker Item Text Style
 export interface PickerItemTextStyle {
-    pickerItemTextLight: {
-      color?: string,
-    },
-    pickerItemTextDark: {
-      color?: string,
-    },
-  };
+  pickerItemTextLight: {
+    color?: string,
+  },
+  pickerItemTextDark: {
+    color?: string,
+  },
+};
