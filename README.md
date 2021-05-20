@@ -176,6 +176,21 @@ npm publish
 
 ## Changelog
 
+### [0.0.28] - 5/20/2021
+
+***Added***
+
+- Added `assets` to exclude in `tsconfig.json`.
+
+***Changed***
+
+- Updating `tsconfig.json`.
+- Updating `peerDependencies` in `package.json`.
+
+***Removed***
+
+- Removed `types` to exclude in `tsconfig.json`.
+
 ### [0.0.27] - 5/20/2021
 
 ***Added***
