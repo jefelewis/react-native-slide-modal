@@ -156,6 +156,10 @@ npm publish
 
 ### [0.0.27] - 5/20/2021
 
+***Added***
+
+- Added Props section to `README`.
+
 ***Changed***
 
 - Changed file structure.
