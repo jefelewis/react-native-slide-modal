@@ -1,6 +1,6 @@
 {
   "name": "react-native-slide-modal",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "description": "React Native Slide Modal",
@@ -29,7 +29,6 @@
     "@types/react": "^17.0.6",
     "@types/react-native": "^0.64.5",
     "eslint": "^7.26.0",
-    "react-native-typescript-transformer": "^1.2.13",
     "typescript": "^4.2.4"
   }
 }
