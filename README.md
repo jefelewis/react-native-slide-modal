@@ -36,17 +36,17 @@
 ## Screenshot (iOS)
 **Bottom Sheet**
 <div align="center">
-  <img src="/assets/screenshots/ios/iosBottomSheet.gif" width="40%" height="40%" />
+  <img src="./assets/screenshots/ios/iosBottomSheet.gif" width="40%" height="40%" />
 </div>
 
 **Form Sheet**
 <div align="center">
-  <img src="/assets/screenshots/ios/iosFormSheet.gif" width="40%" height="40%" />
+  <img src="./assets/screenshots/ios/iosFormSheet.gif" width="40%" height="40%" />
 </div>
 
 ## Screenshot (Android)
 <div align="center">
-  <!-- <img src="/screenshots/android/androidActionSheet.gif" width="40%" height="40%" /> -->
+  <!-- <img src="./assets/screenshots/android/androidActionSheet.gif" width="40%" height="40%" /> -->
 </div>
 
 
@@ -57,13 +57,10 @@ npm i react-native-slide-modal
 ```
 
 **2. Add Example Code:**
-
 ```typescript
 // Imports: Dependencies
 import React, { useState } from 'react';
 import { Button, Text } from 'react-native';
-
-// Imports: Components
 import { SlideModal }  from 'react-native-slide-modal';
 
 // App
